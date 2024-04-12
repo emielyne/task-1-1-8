@@ -1,1 +1,18 @@
+public class CumulativeSumCalculator {
+    public static void main(String[] args) {
+        calculateCumulativeSum(4, 5, 10);
+    }
+
+    public static void calculateCumulativeSum(int... numbers) {
+        int total = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            total += numbers[i];
+            int cumulativeSum = 0;
+            for (int j = 1; j <= numbers[i]; j++) {
+                cumulativeSum += j;
+            }
+            System.out.println(numbers[i] + " = " + cumulativeSum + " (Total: " + total + ")");
+        }
+    }
+}
 
